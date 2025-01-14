@@ -4,10 +4,11 @@ import Stats from "./Stats";
 import Map from "./Map";
 
 const IPAddress = () => {
-  const defaultIPAddress = "41.203.78.171"; // Default IP address
+  const defaultIPAddress = "41.203.78.171";
   const [IPAddress, setIPAddress] = useState(defaultIPAddress);
   const [location, setLocation] = useState("");
   const [timezone, setTimezone] = useState("");
+  go;
   const [ISP, setISP] = useState("");
   const [coordinates, setCoordinates] = useState({
     lat: 27.5035,
@@ -24,7 +25,6 @@ const IPAddress = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         setIPAddress(data.ip);
         setLocation(
           `${data.location.city}, ${data.location.country} ${data.location.postalCode}`
