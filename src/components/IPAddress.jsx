@@ -40,7 +40,7 @@ const IPAddress = () => {
 
   useEffect(() => {
     fetchLocation();
-  }, []); // Fetch location on initial component mount
+  }, []);
 
   return (
     <div className="flex flex-col h-screen relative">
